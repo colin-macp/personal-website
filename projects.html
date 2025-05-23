@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin MacPherson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Projects</h1>
+            <button class="sidebar-toggle" id="sidebar-toggle">+</button>
+            <div class="sidebar" id="sidebar">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a><br>
+                <a href="about.html">ABOUT</a><br>
+                <a href="albums.html">ALBUMS</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="container">
+            <div class="project-list">
+                <div class="project">
+                    <a href="#">
+                        <div class="image-wrapper">
+                            <img src="images/Projects/1st Return Placement - Ad Backhand.png"> </img>
+                            <div class="overlay">
+                                <div class="overlay-text">
+                                    <h1>
+                                        Tennis - Visuals
+                                    </h1>
+                                    <h2> (2025) </h2>
+                                    <p> Utilized d3.js to create data visualizations for the UCLA D1 Men's Tennis Team
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projects/tennis-match-report.html">
+                        <div class="image-wrapper">
+                            <img src="images/Projects/match-report.png"> </img>
+                            <div class="overlay">
+                                <div class="overlay-text">
+                                    <h1>
+                                        Tennis - Match Reports
+                                    </h1>
+                                    <h2> (2024-25) </h2>
+                                    <p> Curated match reports with key statistics for the UCLA D1 Men's Tennis Team </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="#">
+                        <div class="image-wrapper">
+                            <img src="images/Projects/1st Return Placement - Ad Backhand.png"> </img>
+                            <div class="overlay">
+                                <div class="overlay-text">
+                                    <h1>
+                                        FPL Newsletter
+                                    </h1>
+                                    <h2> (2025) </h2>
+                                    <p> Wrote a season review for my personal 2024-25 Fantasy Premier League Season</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projects/mlr-project.html">
+                        <div class="image-wrapper">
+                            <img src="images/Projects/basketball-mlr.png"> </img>
+                            <div class="overlay">
+                                <div class="overlay-text">
+                                    <h1>
+                                        Basketball MLR Model
+                                    </h1>
+                                    <h2> (2025) </h2>
+                                    <p> Created a MLR model to better understand and predict NBA point totals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projects/ts-project.html">
+                        <div class="image-wrapper">
+                            <img src="images/Projects/ts-model.png"> </img>
+                            <div class="overlay">
+                                <div class="overlay-text">
+                                    <h1>
+                                        C02 Emissions Time Series Modeling
+                                    </h1>
+                                    <h2> (2025) </h2>
+                                    <p>
+                                        Built a time series model to understand C02 Emissions and Global Temperature
+                                        Change
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <div class="image-wrapper">
+                        <img src="images/Projects/latc-model.png"> </img>
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h1>
+                                    Coming Soon...
+                                </h1>
+                                <h2> (2025) </h2>
+
+                                <p>
+                                    Currently working on modeling LATC for an eye trainer project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('rotated');
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 40) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin MacPherson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="sidebar-toggle" id="sidebar-toggle">+</button>
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">HOME</a>
+        <a href="projects.html">PROJECTS</a> <br>
+        <a href="about.html">ABOUT</a> <br>
+        <a href="albums.html">ALBUMS</a> <br>
+    </div>
+
+    <div class="main-title">
+        <h1>Colin</h1>
+        <h1>MacPherson</h1>
+        <div class="home-page-links-container">
+            <a class="socials" href="https://www.linkedin.com/in/colin-p-macpherson" title="LinkedIn"><img
+                    src="images/linkedin-logo.svg"></a>
+            <a class="socials" href="https://github.com/colinmacp" title="GitHub"><img src="images/github-logo.svg"></a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('rotated');
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url(../fonts/Lora-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lora Italic";
+    src: url(../fonts/Lora-Italic-VariableFont_wght.ttf) format('truetype');
+    font-style: italic;
+}
+
+.project-title {
+    padding: 0 200px;
+}
+
+.project-title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    text-align: center;
+    color: #000;
+}
+
+.project-details {
+    padding: 0 200px;
+}
+
+.project-details p {
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+}
+
+.pdf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pdf embed {
+    width: 75%;
+    height: 100vh;
+    border: none;
+}
+
+a {
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    transition: 0.1s;
+}
+
+a:hover {
+    color: #D90429;
+}

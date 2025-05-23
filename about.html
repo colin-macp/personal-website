@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin MacPherson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 id="header">About Me</h1>
+            <button class="sidebar-toggle" id="sidebar-toggle">+</button>
+            <div class="sidebar" id="sidebar">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a><br>
+                <a href="about.html">ABOUT</a><br>
+                <a href="albums.html">ALBUMS</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="headshot" id="headshot" src="images/Headshot.JPG" alt="Headshot">
+                </div>
+                <div class="about-col-2">
+                    <p> <span>My name is Colin.</span></p> <br>
+                    <p> I am a student at UCLA studying Economics with a minor in Statistics & Data Science. I am
+                        pursuing a career working in the data domain, with a strong interest in data analytics and data
+                        science roles.
+                    </p><br>
+                    <p> In my spare time I enjoy a plethora of activities, including: <a id="arsenal-link"
+                            href="#">soccer</a>, <a id="marathon" href="#">running</a>, <a id="guitar"
+                            href="#">guitar</a>,
+                        <a id="chess" href="#">chess</a>, <a id="bike" href="#"> biking</a>, <a id="dog"
+                            href="#">walking/petting
+                            dogs</a>, <a id="fish" href="#">fishing</a>,
+                        and
+                        <a id="film" href="#">photography</a>. I
+                        also have a passion for <a id="travel" href="">traveling</a> and learning about other
+                        cultures.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="skill-tree">
+            <div class="container">
+                <div class="row">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> SKILLS </p>
+                        <p class="tab-links" onclick="opentab('experience')"> EXPERIENCE </p>
+                        <p class="tab-links" onclick="opentab('education')"> EDUCATION </p>
+                    </div>
+                    <div class="right">
+                        <div class="tab-contents active-tab" id="skills">
+                            <table>
+                                <tr>
+                                    <th>LANGUAGES</th>
+                                    <th>LIBRARIES</th>
+                                    <th>PROGRAMS</th>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td>Pandas</td>
+                                    <td>VSCode</td>
+                                </tr>
+                                <tr>
+                                    <td>R</td>
+                                    <td>Numpy</td>
+                                    <td>Premier Pro</td>
+                                </tr>
+                                <tr>
+                                    <td>D3.js</td>
+                                    <td>Matplotlib</td>
+                                    <td>Figma</td>
+                                </tr>
+                                <tr>
+                                    <td>SQL</td>
+                                    <td>Scikit</td>
+                                    <td>Blender</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>Torch</td>
+                                    <td>Git</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Tensorflow</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Excel</td>
+                                    <td>Tidyverse</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <table>
+                                <tr>
+                                    <th>SOCCER COACH</th>
+                                    <th>TENNIS CONSULTING - Data Analytics</th>
+                                </tr>
+                                <tr>
+                                    <td>Palo Alto SC (2020-22)</td>
+                                    <td>Team Lead (2024-25)</td>
+                                </tr>
+                                <tr>
+                                    <td>Gunn High School (2021-22)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <table>
+                                <tr>
+                                    <th>UCLA <span> (2023-25)</span></th>
+                                    <th>FOOTHILL COLLEGE <span> (2021-23) </span></th>
+                                    <th>GUNN HIGH SCHOOL <span> (2016-20)</span></th>
+                                </tr>
+                                <tr>
+                                    <td>B.A. Economics</td>
+                                    <td>A.A.T Economics</td>
+                                </tr>
+                                <tr>
+                                    <td>Minor: Stats & DS</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="links-container">
+        <a class="socials" href="https://www.linkedin.com/in/colin-p-macpherson" title="LinkedIn"><img
+                src="images/linkedin-logo.svg"></a>
+        <a class="socials" href="https://github.com/colinmacp" title="GitHub"><img src="images/github-logo.svg"></a>
+    </div>
+
+    <script>
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            sidebarToggle.classList.toggle('rotated');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+                sidebarToggle.classList.remove('rotated');
+            }
+        });
+
+        window.onscroll = function () { scrollFunction() };
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".header");
+            if (window.scrollY > 40) {
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+
+        var headshot = document.getElementById('headshot');
+        document.getElementById("arsenal-link").addEventListener('mouseover', function () { headshot.src = "images/arsenal.gif"; });
+        document.getElementById("arsenal-link").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("marathon").addEventListener('mouseover', function () { headshot.src = "images/marathon.JPG"; });
+        document.getElementById("marathon").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("fish").addEventListener('mouseover', function () { headshot.src = "images/fish.jpeg"; });
+        document.getElementById("fish").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("bike").addEventListener('mouseover', function () { headshot.src = "images/bike.jpeg"; });
+        document.getElementById("bike").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("dog").addEventListener('mouseover', function () { headshot.src = "images/dog.JPG"; });
+        document.getElementById("dog").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("film").addEventListener('mouseover', function () { headshot.src = "images/film.JPG"; });
+        document.getElementById("film").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+        document.getElementById("travel").addEventListener('mouseover', function () { headshot.src = "images/travel1.JPG"; });
+        document.getElementById("travel").addEventListener('mouseout', function () { headshot.src = "images/headshot.JPG"; });
+    </script>
+</body>

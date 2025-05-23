@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin MacPherson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Albums</h1>
+            <button class="sidebar-toggle" id="sidebar-toggle">+</button>
+            <div class="sidebar" id="sidebar">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a><br>
+                <a href="about.html">ABOUT</a><br>
+                <a href="albums.html">ALBUMS</a><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="albums-container">
+        <div class="album">
+            <a href="albums/mt-tam.html">
+                <div class="image-wrapper">
+                    <img src="images/Albums/DSC01626.JPG" alt="Mt Tam" />
+                    <div class="overlay">
+                        <div class="overlay-text">Mt. Tamalpais 2025</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="albums/st-hyppo.html">
+                <div class="image-wrapper">
+                    <img src="images/Albums/2A1CC99F-2045-4641-9E97-CDC3A715D04B_1_105_c.jpeg"
+                        alt="Saint Hippolyte Trip" />
+                    <div class="overlay">
+                        <div class="overlay-text">Saint Hippolyte 2024</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="album">
+            <a href="albums/orba.html">
+                <div class="image-wrapper">
+                    <img src="images/Albums/IMG_0276.JPG" alt="Iceland Trip" />
+                    <div class="overlay">
+                        <div class="overlay-text">Orba 2023</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="album">
+            <div class="image-wrapper">
+                <img src="images/Albums/001123980025.jpg" alt="Ischia" />
+                <div class="overlay">
+                    <div class="overlay-text">Ischia 2023</div>
+                </div>
+            </div>
+        </div>
+        <div class="album">
+            <a href="albums/slc.html">
+                <div class="image-wrapper">
+                    <img src="images/Albums/A9F4A5B1-7DE9-4DFE-A8A5-B2046BB9C82E.JPG" alt="Salt Lake" />
+                    <div class="overlay">
+                        <div class="overlay-text">Salt Lake City 2020</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="album">
+            <a href="albums/zion-gc.html">
+                <div class="image-wrapper">
+                    <img src="images/Albums/84743F21-22F9-4954-9F35-68503C096701.JPG" alt="Zion" />
+                    <div class="overlay">
+                        <div class="overlay-text">Zion 2020</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('rotated');
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 40) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+</script>
+
+</html>

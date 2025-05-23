@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin MacPherson</title>
+    <link rel="stylesheet" href="album-style.css">
+</head>
+
+<body>
+    <a href="../albums.html" class="back-button"> Back to Albums </a>
+
+    <div class="album-title">
+        <h1>Orba 2023</h1>
+    </div>
+
+    <div class="albums-container">
+        <div class="album">
+            <div class="image-wrapper">
+                <img src="orba/1.jpeg" alt="Japan Trip" />
+                <div class="overlay">
+                    <div class="overlay-text">Mt. Tamalpais 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="image-wrapper">
+                <img src="orba/3.jpeg" alt="Japan Trip" />
+                <div class="overlay">
+                    <div class="overlay-text">Mt. Tamalpais 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="image-wrapper">
+                <img src="orba/5.jpeg" alt="Japan Trip" />
+                <div class="overlay">
+                    <div class="overlay-text">Mt. Tamalpais 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="album">
+            <div class="image-wrapper">
+                <img src="orba/6.jpeg" alt="Japan Trip" />
+                <div class="overlay">
+                    <div class="overlay-text">Mt. Tamalpais 2025</div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script>
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('rotated');
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 40) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+</script>
+
+</html>
