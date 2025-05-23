@@ -110,6 +110,20 @@
     transform: rotate(-45deg) scale(1.1);
 }
 
+.home-page-links-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.home-page-links-container p {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .home-page-links-container .socials img {
     width: 20px;
     height: 20px;
@@ -306,7 +320,23 @@ table {
 }
 
 .links-container {
-    padding-left: 10px
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.links-container p {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.links-container .socials img {
+    width: 20px;
+    height: 20px;
 }
 
 .socials img {
