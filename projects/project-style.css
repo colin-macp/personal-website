@@ -60,3 +60,33 @@ a {
 a:hover {
     color: #D90429;
 }
+
+@media (max-width: 768px) {
+    .project-title {
+        padding: 0 20px;
+    }
+
+    .project-title h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .project-details {
+        padding: 0 20px;
+    }
+
+    .project-details p {
+        font-size: 14px;
+    }
+
+    .pdf {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .pdf embed {
+        width: 95%;
+        height: 80vh;
+    }
+}
